@@ -1,17 +1,25 @@
 <html>
     <head>
         <title>VU Weihnachtsfeier info board</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <div class="text-container paper4">
-            <div class="paper">
-                <img src="./nyame_w.png">
+        <div style="z-index:2; position: relative">
+            <div class="text-container paper4">
+                <div class="paper">
+                    <img src="./nyame_w.png">
+                </div>
             </div>
-        </div><div class="text-container paper6">
-            <div class="paper">
-                <img src="./archon_w.png">
-            </div>
-        </div>        <div class="wrapper">
+                   
+        </div>
+        <div style="z-index:2;position: absolute;bottom: 0px;left: 0px;width: 100%;">
+            <div class="text-container paper6">
+                <div class="paper">
+                    <img src="./archon_w.png">
+                </div>
+            </div> 
+        </div>
+        <div class="wrapper">
             
             <div class="text-container paper1">
                 <div class="paper">
@@ -96,8 +104,8 @@
             min-height: 100%;
             padding-top: 1rem;
             flex-wrap: wrap;
-            background-image: url(./91618.jpg);
-            background-size: cover;
+            z-index: 1;
+            position: relative;
 
         }
         .flex-wrapper{
@@ -110,7 +118,7 @@
         body {
             padding: 0px !important;
             min-height: 100%;
-            width: 100%;
+            min-width: 100%;
             margin-bottom: 0px !important;
             margin: 0px !important;
             overflow: auto;
@@ -118,9 +126,14 @@
             background-position: right top;
             font-family: 'Fondamento';
         }
+        body{
 
+            background-image: url(./91618.jpg);
+            background-size: cover;
+            width: fit-content
+        }
         .text-container {
-            /* position: absolute; */
+            position: relative;
             text-align: center;
             border-bottom-right-radius: 100px 10px;
             color: rgb(0 0 0 / 50%);
@@ -157,6 +170,7 @@
             background: rgba(0, 0, 0, 0.2);
             box-shadow: 2px 15px 5px rgba(0, 0, 0, 0.4);
             transform: matrix(-1, -0.1, 0, 1, 0, 0);
+            max-width: 96%;
         }
 
         a {
@@ -220,6 +234,7 @@
             right: 0.5rem;
             top: 0.5rem;
             max-width: 20%;
+            z-index: 1;
         }
 
         img {
@@ -273,6 +288,32 @@
 
             .text-container.paper2 {
                 width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .text-container.paper1 {
+                font-size: 1rem;
+                min-width: fit-content;
+                /* position: relative; */
+            }
+
+            .text-container.paper1 img {
+                /* float: right; */
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+
+            .text-container.paper1 h1 {
+                width: fit-content;
+                display: block;
+                line-height: 2;
+                padding-right: 80px;
+            }
+
+            .head {
+                position: relative;
             }
         }
 

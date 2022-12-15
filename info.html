@@ -6,16 +6,18 @@
     <body>
         <div style="z-index:2; position: relative">
             <div class="text-container paper4">
-                <div class="paper">
+                <div class="paper" style="text-align: center;">
                     <img src="./nyame_w.png">
+                    <p style="margin: 0px">"Herzlich willkommen"</p>
                 </div>
             </div>
                    
         </div>
         <div style="z-index:2;position: absolute;bottom: 0px;left: 0px;width: 100%;">
             <div class="text-container paper6">
-                <div class="paper">
+                <div class="paper" style="text-align: center;">
                     <img src="./archon_w.png">
+                    <p style="margin: 0px">"Schön dass du da bist"</p>
                 </div>
             </div> 
         </div>
@@ -35,37 +37,31 @@
                 <div class="text-container paper2">
                     <div class="paper">
                         <h2>Wie geht das hier?</h2>
-                        <ul>
-                            <li>Bitte aktiviert euer Mikro und Kamera</li>
+                        <p>Wenn du mit anderen sprechen möchtest, hast du zwei Optionen:</p>
+                        <ol>
+                            <li>Manche Bereiche sind Chatzonen (z.B. der Teppich am Kamin). Betrittst du diesen Bereich, kannst du dem Sprach- und Videochat dort beitreten und mit allen sprechen, die sich ebenfalls dort aufhalten. Wenn du den Teppich verlässt, verlässt du auch den Chat.</li>
 
-                            <li>Wenn ihr in der Nähe von anderen steht, könnt ihr euch unterhalten</li>
-
-                            <li>Es gibt einige größere Video-Chat Räume:
-                                <ul>
-                                    <li>vor dem Kamin im Hauptraum</li>
-                                    <li>auf dem Teppich um den großen Tisch im Hauptraum</li>
-                                    <li>um die Tische im Dungeon</li>
-                                    <li>um den Tisch auf der Terasse</li>
-                                </ul>
-                            </li>
-                        </ul>
+                            <li>Private Chatrunden. Möchtest du ein privates Gespräch führen kannst du dich einfach mit jemandem zusammenstellen. Dann öffnet sich ein privater Chat für euch.</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="text-container paper3">
                     <div class="paper">
                         <h2>Online-Spiele</h2>
-                        <p>In den Video-Chat Räumen im Dungeon werden Spiele gespielt: </p>
+                        <p>Wir haben an verschiedenen Orten Themenzonen und Spieletische eingerichtet: </p>
                         <ul>
-                            <li>Stadt Land Fluss: <a href=""> hier </a></li>
-                            <li>Gartic Phone: <a href=""> hier </a></li>
+                            <li>Kamin: Just Chat</li>
+                            <li>Oberer Tisch im Dungeon: Stadt, Land, Mythodea</li>
+                            <li>unterer Tisch im Dungeon: Gatic Phone</li>
                         </ul>
+                        <p>Die übrigen Chatzonen am Kamin und auf der Terasse könnt ihr gern selbstorgnisiert für andere Spiele nutzen.</p>
                     </div>
                 </div>
             </div>
             <div class="text-container paper5">
                 <div class="paper">
-                    <h2>Gewinnspiel</h2>
-                    <p>Testing Lorem ipsum</p>
+                    <h2>Fragen? Antworten!</h2>
+                    <p>Für Fragen zu Workadventure könnt ihr euch jederzeit an Paula wenden.</p>
                 </div>
             </div>
         </div>
@@ -106,6 +102,7 @@
             flex-wrap: wrap;
             z-index: 1;
             position: relative;
+            padding-bottom: 1rem;
 
         }
         .flex-wrapper{
@@ -130,7 +127,10 @@
 
             background-image: url(./91618.jpg);
             background-size: cover;
-            width: fit-content
+            width: fit-content;
+        }
+        html{
+            overflow: hidden;
         }
         .text-container {
             position: relative;
@@ -138,7 +138,7 @@
             border-bottom-right-radius: 100px 10px;
             color: rgb(0 0 0 / 50%);
             letter-spacing: 0.05em;
-            line-height: 1.8;
+            line-height: 1;
             top: 2rem;
             /* left: 5em; */
             max-width: 80%;
@@ -209,7 +209,7 @@
         }
 
         .text-container.paper2 {
-            width: 400px;
+            width: 55%;
             margin-left: 2rem;
             margin-top: -1rem;
             font-family: 'Font1';
@@ -221,7 +221,7 @@
 
         .text-container.paper3 {
             width: 40%;
-            margin-top: 3rem;
+            margin-top: 4rem;
             font-family: 'Font2';
         }
         .paper3 .paper {
@@ -256,7 +256,7 @@
             width: 400px;
             margin-top: 20px;
             font-family: 'Font3';
-            margin-right: 3rem;
+            margin-left: 30%;
         }
         .paper5 .paper {
             padding: 0.5rem 2rem;
@@ -288,6 +288,9 @@
 
             .text-container.paper2 {
                 width: 80%;
+            }
+            .paper4 p, .paper6 p {
+                font-size: 12px;
             }
         }
 
